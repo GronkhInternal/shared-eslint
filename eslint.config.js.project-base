@@ -1,0 +1,44 @@
+// @ts-check
+
+const tseslint = require('typescript-eslint');
+const shared = require('./shared-eslint/eslint.config.js');
+
+module.exports = tseslint.config(
+  ...shared,
+  {
+    files: ['**/*.ts'],
+    rules: {
+      '@angular-eslint/component-selector': [
+        'error',
+        {
+          'type': 'element',
+          'prefix': [
+            'grnk'
+          ],
+          'style': 'kebab-case'
+        }
+      ],
+      '@angular-eslint/directive-selector': [
+        'error',
+        {
+          'type': 'attribute',
+          'prefix': [
+            'grnk',
+            'glink',
+            'gruiFor',
+            'gruiSref'
+          ],
+          'style': 'camelCase'
+        }
+      ],
+    },
+  },
+  {
+    files: ['**/*.html'],
+    rules: {
+      // Remove me later, only use until conversion to new module elements is completed
+      '@angular-eslint/template/click-events-have-key-events': 'warn',
+      '@angular-eslint/template/interactive-supports-focus': 'warn',
+    },
+  },
+);
