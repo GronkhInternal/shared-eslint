@@ -1,0 +1,38 @@
+// @ts-check
+
+const tseslint = require('typescript-eslint');
+const shared = require('./shared-eslint/eslint.config.js');
+
+module.exports = tseslint.config(
+  ...shared,
+  {
+    files: ['**/*.ts'],
+    rules: {
+      '@angular-eslint/component-selector': [
+        'error',
+        {
+          'type': 'element',
+          'prefix': [
+            'app'
+          ],
+          'style': 'kebab-case'
+        }
+      ],
+      '@angular-eslint/directive-selector': [
+        'error',
+        {
+          'type': 'attribute',
+          'prefix': [
+            'app',
+          ],
+          'style': 'camelCase'
+        }
+      ],
+    },
+  },
+  {
+    files: ['**/*.html'],
+    rules: {
+    },
+  },
+);
