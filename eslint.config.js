@@ -9,6 +9,7 @@ const ngcompatformat = require('./.ng-cli-compat--formatting-add-on.eslintrc.js'
 
 const eslintImportPlugin = require('eslint-plugin-import')
 const eslintUnicornPlugin = require('eslint-plugin-unicorn')
+const eslintConfigPrettier = require("eslint-config-prettier");
 
 module.exports = tseslint.config(
   {
@@ -22,6 +23,7 @@ module.exports = tseslint.config(
       ...ngcompat,
       ...ngcompatformat,
 
+      eslintConfigPrettier,
     ],
     plugins: {
       '@typescript-eslint': tseslint.plugin,
