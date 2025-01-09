@@ -216,8 +216,6 @@ module.exports = tseslint.config(
         'error',
         {
           'allow': [
-            'zone.js/**/*',
-            'zone.js'
           ]
         }
       ],
