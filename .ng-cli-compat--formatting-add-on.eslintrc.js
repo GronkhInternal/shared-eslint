@@ -1,9 +1,7 @@
-const jsdoc = require("eslint-plugin-jsdoc");
 const tseslint = require('typescript-eslint');
 
 module.exports = tseslint.config({
   plugins: {
-    jsdoc,
     '@typescript-eslint': tseslint.plugin,
   },
 
@@ -13,7 +11,6 @@ module.exports = tseslint.config({
     "comma-dangle": "off",
     curly: "error",
     "eol-last": "error",
-    "jsdoc/check-alignment": "error",
 
     "max-len": ["error", {
       code: 140,

@@ -29,10 +29,6 @@ module.exports = tseslint.config(
       '@typescript-eslint': tseslint.plugin,
       import: eslintImportPlugin,
       unicorn: eslintUnicornPlugin,
-
-      // 'eslint-plugin-no-null': 'eslint-plugin-no-null',
-      // 'eslint-plugin-jsdoc': 'eslint-plugin-jsdoc',
-      // 'eslint-plugin-prefer-arrow': 'eslint-plugin-prefer-arrow'
     },
     languageOptions: {
       parser: tseslint.parser,
@@ -42,6 +38,7 @@ module.exports = tseslint.config(
     },
     processor: angular.processInlineTemplates,
     rules: {
+      'no-empty-function': 'off',
       '@angular-eslint/component-max-inline-declarations': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@angular-eslint/no-attribute-decorator': 'error',
@@ -139,19 +136,6 @@ module.exports = tseslint.config(
           'accessibility': 'no-public'
         }
       ],
-      // '@typescript-eslint/member-delimiter-style': [
-      //   'error',
-      //   {
-      //     'multiline': {
-      //       'delimiter': 'semi',
-      //       'requireLast': true
-      //     },
-      //     'singleline': {
-      //       'delimiter': 'semi',
-      //       'requireLast': false
-      //     }
-      //   }
-      // ],
       '@typescript-eslint/no-empty-function': 'error',
       '@typescript-eslint/no-floating-promises': 'error',
       '@typescript-eslint/no-for-in-array': 'error',

@@ -1,15 +1,11 @@
 const _import = require('eslint-plugin-import');
-const preferArrow = require('eslint-plugin-prefer-arrow');
 
-const jsdoc = require("eslint-plugin-jsdoc");
 const tseslint = require('typescript-eslint');
 
 module.exports = tseslint.config({
   plugins: {
     '@typescript-eslint': tseslint.plugin,
     import: _import,
-    jsdoc,
-    "prefer-arrow": preferArrow,
   },
 
   rules: {
@@ -77,7 +73,6 @@ module.exports = tseslint.config({
     "@typescript-eslint/dot-notation": "error",
     "@typescript-eslint/member-ordering": "error",
     "@typescript-eslint/naming-convention": "error",
-    "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-empty-interface": "error",
     "@typescript-eslint/no-explicit-any": "off",
 
@@ -123,8 +118,6 @@ module.exports = tseslint.config({
 
     "id-match": "error",
     "import/no-deprecated": "warn",
-    // "jsdoc/newline-after-description": "error",
-    "jsdoc/no-types": "error",
     "max-classes-per-file": "off",
     "no-bitwise": "error",
     "no-caller": "error",
@@ -178,7 +171,6 @@ module.exports = tseslint.config({
     "no-var": "error",
     "object-shorthand": "error",
     "one-var": ["error", "never"],
-    "prefer-arrow/prefer-arrow-functions": "error",
     "prefer-const": "error",
     radix: "error",
     "use-isnan": "error",
