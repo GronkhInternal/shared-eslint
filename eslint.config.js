@@ -291,6 +291,7 @@ module.exports = tseslint.config(
       ...angular.configs.templateAccessibility,
     ],
     rules: {
+      '@angular-eslint/template/prefer-control-flow': 'error',
       '@angular-eslint/template/alt-text': 'warn',
       '@angular-eslint/template/elements-content': 'warn',
       '@angular-eslint/template/valid-aria': 'warn',
