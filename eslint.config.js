@@ -48,7 +48,7 @@ module.exports = tseslint.config(
       '@angular-eslint/no-queries-metadata-property': 'error',
       '@angular-eslint/prefer-output-readonly': 'error',
       '@angular-eslint/use-component-view-encapsulation': 'error',
-      '@angular-eslint/prefer-signals': 'error',
+      '@angular-eslint/prefer-signals': 'warn',
       '@angular-eslint/prefer-standalone': 'error',
       '@angular-eslint/sort-lifecycle-methods': 'error',
       '@typescript-eslint/await-thenable': 'error',
