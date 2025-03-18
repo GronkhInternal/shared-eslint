@@ -218,7 +218,7 @@ module.exports = tseslint.config(
         'error',
         1200
       ],
-      'newline-per-chained-call': 'error',
+      'newline-per-chained-call': 'off',
       'no-bitwise': 'off',
       'no-cond-assign': 'off',
       'no-param-reassign': 'error',
