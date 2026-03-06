@@ -14,6 +14,9 @@ const eslintConfigPrettier = require("eslint-config-prettier");
 module.exports = tseslint.config(
   {
     files: ['**/*.ts'],
+    ignores: [
+      'src/app/interfaces/api/copycat.d.ts',
+    ],
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
