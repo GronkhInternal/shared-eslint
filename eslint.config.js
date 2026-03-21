@@ -31,7 +31,7 @@ module.exports = tseslint.config(
     plugins: {
       '@typescript-eslint': tseslint.plugin,
       import: eslintImportPlugin,
-      unicorn: eslintUnicornPlugin,
+      unicorn: eslintUnicornPlugin.default,
     },
     languageOptions: {
       parser: tseslint.parser,
