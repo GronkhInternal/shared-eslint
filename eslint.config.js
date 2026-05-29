@@ -42,6 +42,9 @@ module.exports = tseslint.config(
     processor: angular.processInlineTemplates,
     rules: {
       'no-empty-function': 'off',
+      "@angular-eslint/prefer-host-metadata-property": [
+        "error"
+      ],
       '@angular-eslint/component-max-inline-declarations': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
       '@angular-eslint/no-attribute-decorator': 'error',
@@ -115,25 +118,40 @@ module.exports = tseslint.config(
       '@typescript-eslint/member-ordering': [
         'error',
         {
-          'default': [
-            'public-field',
-            'protected-field',
-            'private-field',
-            'public-constructor',
-            'protected-constructor',
-            'private-constructor',
-            'public-decorated-method',
-            'protected-decorated-method',
-            'private-decorated-method',
-            'public-static-method',
-            'public-instance-method',
-            'public-abstract-method',
-            'protected-static-method',
-            'protected-instance-method',
-            'protected-abstract-method',
-            'private-static-method',
-            'private-instance-method'
-          ]
+          'interfaces': {
+            order: 'natural',
+            optionalityOrder: 'required-first',
+          },
+          'typeLiterals': {
+            order: 'natural',
+            optionalityOrder: 'required-first',
+          },
+          'default': {
+            // order: 'alphabetically-case-insensitive',
+            order: 'as-written',
+            memberTypes: [
+              'public-field',
+              'public-static-readonly-field',
+              'protected-field',
+              'protected-static-readonly-field',
+              'private-field',
+              'private-static-readonly-field',
+              'public-constructor',
+              'protected-constructor',
+              'private-constructor',
+              'public-decorated-method',
+              'protected-decorated-method',
+              'private-decorated-method',
+              'public-static-method',
+              'public-instance-method',
+              'public-abstract-method',
+              'protected-static-method',
+              'protected-instance-method',
+              'protected-abstract-method',
+              'private-static-method',
+              'private-instance-method'
+            ]
+          }
         }
       ],
       '@typescript-eslint/explicit-member-accessibility': [
