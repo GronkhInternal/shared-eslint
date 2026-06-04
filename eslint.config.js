@@ -107,6 +107,13 @@ module.exports = tseslint.config(
           ]
         },
         {
+          "selector": "classProperty",
+          "modifiers": ["static"],
+          "format": ["UPPER_CASE"],
+          leadingUnderscore: 'allow',
+          trailingUnderscore: 'allow',
+        },
+        {
           'selector': 'parameter',
           'format': [
             'camelCase',
